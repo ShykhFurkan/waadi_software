@@ -1,0 +1,73 @@
+.section {
+    background-color: var(--color-background);
+    border-top: 1px solid var(--color-border-subtle);
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.columnTitle {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.industryGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1.5rem;
+}
+
+.industryItem {
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    transition: all var(--transition-fast);
+}
+
+.industryItem:hover {
+    border-color: var(--color-orange);
+    /* Accent hover */
+    transform: translateY(-2px);
+}
+
+.icon {
+    color: var(--color-blue-deep);
+}
+
+[data-theme='dark'] .icon {
+    color: var(--color-sand);
+}
+
+.reasonList {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+}
+
+.checkIcon {
+    color: var(--color-accent);
+    /* Orange checkmarks */
+    flex-shrink: 0;
+}
+
+@media (min-width: 1024px) {
+    .wrapper {
+        flex-direction: row;
+        gap: 6rem;
+    }
+
+    .column {
+        flex: 1;
+    }
+}

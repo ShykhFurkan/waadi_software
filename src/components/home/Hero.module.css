@@ -1,0 +1,146 @@
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding-top: 0;
+    /* Remove manual padding-top if flex centering handles it, or keep it if alignment is needed. 
+       Actually, standard alignment is center. Removing padding-top might make it look exactly centered. 
+       Let's keep padding-top if we want to offset the navbar visually, but usually pure center ignores navbar.
+       Let's try pure center first. */
+}
+
+.bgWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.bgImage {
+    object-fit: cover;
+    object-position: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Subtle Sand Gradient Overlay */
+    background: linear-gradient(to right,
+            rgba(244, 241, 236, 0.85),
+            rgba(244, 241, 236, 0.65),
+            rgba(244, 241, 236, 0.0));
+}
+
+[data-theme='dark'] .overlay {
+    background: linear-gradient(to right,
+            rgba(28, 28, 28, 0.9),
+            rgba(28, 28, 28, 0.7),
+            rgba(28, 28, 28, 0.0));
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+.textContent {
+    max-width: 800px;
+    animation: fadeUp 1s ease-out forwards;
+}
+
+.headline {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-text-primary);
+    /* Charcoal */
+}
+
+[data-theme='dark'] .headline {
+    color: var(--color-text-primary);
+    /* Sand */
+}
+
+.highlight {
+    color: var(--color-accent-primary);
+    /* Steel Blue Only */
+}
+
+.subheadline {
+    font-size: 1.25rem;
+    color: var(--color-text-primary);
+    margin-bottom: 1rem;
+    /* Reduced to fit Trust Line */
+    max-width: 650px;
+    opacity: 0.9;
+}
+
+[data-theme='dark'] .subheadline {
+    color: var(--color-text-secondary);
+}
+
+.trustLine {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    /* Muted */
+    margin-bottom: 2.5rem;
+    opacity: 0.8;
+    font-weight: 400;
+}
+
+.actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.secondaryBtn {
+    border-color: var(--color-border-strong);
+    color: var(--color-text-primary);
+    background: transparent;
+}
+
+.secondaryBtn:hover {
+    border-color: var(--color-accent-primary);
+    color: var(--color-accent-primary);
+    background: transparent;
+}
+
+[data-theme='dark'] .secondaryBtn {
+    border-color: var(--color-border-subtle);
+    color: var(--color-text-primary);
+}
+
+[data-theme='dark'] .secondaryBtn:hover {
+    border-color: var(--color-accent-primary);
+    color: var(--color-accent-primary);
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (min-width: 768px) {
+    .headline {
+        font-size: 4rem;
+    }
+
+    .subheadline {
+        font-size: 1.5rem;
+    }
+}

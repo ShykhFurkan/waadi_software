@@ -1,0 +1,168 @@
+/* Waadi Studio Specific Styles */
+
+.studioIntro {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.studioLabel {
+    display: inline-block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--color-teal);
+    background: rgba(61, 182, 177, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-full);
+    margin-bottom: 1.5rem;
+}
+
+.title {
+    font-size: 3rem;
+    background: linear-gradient(135deg, var(--color-blue-deep) 0%, var(--color-teal) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1.5rem;
+}
+
+[data-theme='dark'] .title {
+    background: linear-gradient(135deg, var(--color-green) 0%, var(--color-teal) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.introText {
+    font-size: 1.25rem;
+    color: var(--color-foreground);
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* Service Grid (Video, Content, Ads) */
+.servicesGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 6rem;
+}
+
+.serviceCard {
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    padding: 2.5rem;
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-base);
+    position: relative;
+    overflow: hidden;
+}
+
+.serviceCard:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-teal);
+    box-shadow: 0 10px 30px -10px rgba(61, 182, 177, 0.15);
+}
+
+.serviceIcon {
+    color: var(--color-teal);
+    margin-bottom: 1.5rem;
+}
+
+.serviceTitle {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-blue-deep);
+}
+
+[data-theme='dark'] .serviceTitle {
+    color: var(--color-green);
+}
+
+.serviceDesc {
+    color: var(--color-muted-foreground);
+    margin-bottom: 1.5rem;
+}
+
+.serviceMeta {
+    font-size: 0.875rem;
+    color: var(--color-teal-dim);
+    font-weight: 500;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-border-subtle);
+}
+
+/* Platforms Section */
+.platformsSection {
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+.platformsGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.platformItem {
+    background: var(--color-background);
+    border: 1px solid var(--color-border);
+    padding: 1rem 2rem;
+    border-radius: var(--radius-md);
+    color: var(--color-foreground);
+    font-weight: 600;
+    font-size: 1rem;
+    transition: border-color var(--transition-fast);
+}
+
+.platformItem:hover {
+    border-color: var(--color-pink);
+    color: var(--color-pink);
+}
+
+/* Connection to Growth Section */
+.growthSection {
+    background: linear-gradient(135deg, var(--color-blue-deep) 0%, #051929 100%);
+    color: white;
+    padding: 4rem;
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 5rem;
+}
+
+.growthSection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top right, rgba(61, 182, 177, 0.2), transparent 60%);
+    pointer-events: none;
+}
+
+.growthTitle {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #FFFFFF;
+}
+
+.growthText {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 600px;
+}
+
+@media (min-width: 768px) {
+    .servicesGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

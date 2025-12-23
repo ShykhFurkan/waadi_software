@@ -1,0 +1,137 @@
+.pageHeader {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.title {
+    font-size: 3rem;
+    color: var(--color-blue);
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.125rem;
+    color: var(--color-foreground);
+    opacity: 0.8;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.intro {
+    margin-bottom: 2rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+}
+
+.serviceCard {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+    opacity: 0;
+    animation: fadeUp 0.8s ease-out forwards;
+}
+
+.serviceCard:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.serviceCard:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.serviceCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px -10px rgba(13, 50, 77, 0.1);
+    border-color: var(--color-accent);
+}
+
+.imageWrapper {
+    width: 100%;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--color-border-subtle);
+}
+
+.image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: transform var(--transition-slow);
+}
+
+.serviceCard:hover .image {
+    transform: scale(1.05);
+}
+
+.content {
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
+}
+
+.cardTitle {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: var(--color-blue-deep);
+}
+
+.cardDescription {
+    font-size: 1.125rem;
+    color: var(--color-muted-foreground);
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+[data-theme='dark'] .cardTitle {
+    color: var(--color-green);
+}
+
+[data-theme='dark'] .cardDescription {
+    color: rgba(204, 229, 207, 0.7);
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (min-width: 1024px) {
+    .serviceCard {
+        flex-direction: row;
+        align-items: stretch;
+        min-height: 320px;
+    }
+
+    .imageWrapper {
+        width: 45%;
+        height: auto;
+    }
+
+    .content {
+        width: 55%;
+        padding: 3rem;
+    }
+
+    /* Alternate layout */
+    .serviceCard:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+}

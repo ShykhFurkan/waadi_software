@@ -1,0 +1,129 @@
+.introSection {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.title {
+    font-size: 3rem;
+    color: var(--color-blue);
+    margin-bottom: 1.5rem;
+}
+
+.introText {
+    font-size: 1.25rem;
+    color: var(--color-foreground);
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* What We Build List */
+.buildSection {
+    background-color: var(--color-card);
+    border-radius: var(--radius-lg);
+    padding: 4rem 2rem;
+    margin-bottom: 5rem;
+    border: 1px solid var(--color-border);
+}
+
+.sectionTitle {
+    font-size: 2rem;
+    color: var(--color-blue-deep);
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+[data-theme='dark'] .sectionTitle {
+    color: var(--color-green);
+}
+
+.buildGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.buildItem {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--color-border-subtle);
+    transition: background-color var(--transition-fast);
+}
+
+.buildItem:last-child {
+    border-bottom: none;
+}
+
+.buildItem:hover {
+    background-color: var(--color-border-subtle);
+    border-radius: var(--radius-md);
+}
+
+.iconBox {
+    width: 48px;
+    height: 48px;
+    background-color: var(--color-background);
+    color: var(--color-teal);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.itemContent h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-blue);
+}
+
+.itemContent p {
+    font-size: 1rem;
+    color: var(--color-muted-foreground);
+    margin: 0;
+}
+
+/* Outcomes Grid */
+.outcomesGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 5rem;
+}
+
+.outcomeCard {
+    background: var(--color-background);
+    border: 1px solid var(--color-border);
+    padding: 2rem;
+    border-radius: var(--radius-md);
+    text-align: center;
+}
+
+.outcomeNumber {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-pink);
+    /* Emotional accent for results */
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.outcomeText {
+    font-size: 1.125rem;
+    color: var(--color-blue-deep);
+}
+
+[data-theme='dark'] .outcomeText {
+    color: var(--color-green);
+}
+
+@media (min-width: 768px) {
+    .buildGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .outcomesGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

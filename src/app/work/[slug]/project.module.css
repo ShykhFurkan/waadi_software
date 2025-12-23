@@ -1,0 +1,141 @@
+/* Case Study Template Styles */
+
+.wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    margin-bottom: 4rem;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 2rem;
+}
+
+.meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.category {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-teal);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.status {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-full);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.statusLive {
+    background: rgba(61, 182, 177, 0.1);
+    color: var(--color-teal);
+}
+
+.statusDemo {
+    background: rgba(246, 177, 206, 0.1);
+    color: var(--color-pink);
+}
+
+.statusInternal {
+    background: rgba(21, 129, 191, 0.1);
+    color: var(--color-blue);
+}
+
+.title {
+    font-size: 3rem;
+    color: var(--color-blue-deep);
+    margin-bottom: 1rem;
+}
+
+[data-theme='dark'] .title {
+    color: var(--color-foreground);
+}
+
+/* Sections */
+.section {
+    margin-bottom: 4rem;
+}
+
+.sectionTitle {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-blue);
+    margin-bottom: 1rem;
+    border-left: 3px solid var(--color-teal);
+    padding-left: 1rem;
+}
+
+[data-theme='dark'] .sectionTitle {
+    color: var(--color-green);
+}
+
+.text {
+    font-size: 1.125rem;
+    color: var(--color-foreground);
+    line-height: 1.7;
+    opacity: 0.9;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.listItem {
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-md);
+    color: var(--color-muted-foreground);
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Outcome Quote Style */
+.outcomeBox {
+    background: var(--color-blue-deep);
+    color: #F4F1EC;
+    padding: 2rem;
+    border-radius: var(--radius-md);
+}
+
+[data-theme='dark'] .outcomeBox {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--color-border);
+}
+
+.outcomeText {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: inherit;
+}
+
+/* Actions */
+.actions {
+    margin-top: 4rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.backLink {
+    color: var(--color-muted-foreground);
+    font-size: 0.9rem;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}

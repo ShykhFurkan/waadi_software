@@ -1,0 +1,134 @@
+.section {
+    background-color: var(--color-background);
+}
+
+.header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 4rem;
+}
+
+.subtitle {
+    color: var(--color-muted-foreground);
+    font-size: 1.125rem;
+    margin-top: 1rem;
+}
+
+.steps {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    position: relative;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    flex: 1;
+}
+
+.iconContainer {
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    width: 80px;
+    height: 80px;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 2;
+    color: var(--color-blue-deep);
+    transition: all var(--transition-base);
+}
+
+[data-theme='dark'] .iconContainer {
+    color: var(--color-beige);
+}
+
+.step:hover .iconContainer {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(207, 75, 0, 0.2);
+    /* Orange glow */
+}
+
+.stepNumber {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: var(--color-blue-deep);
+    color: #FFF;
+    width: 24px;
+    height: 24px;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+[data-theme='dark'] .stepNumber {
+    background: var(--color-sand);
+    color: var(--color-blue-deep);
+}
+
+.stepTitle {
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+}
+
+.stepDesc {
+    color: var(--color-muted-foreground);
+    font-size: 0.9375rem;
+    max-width: 250px;
+}
+
+.connector {
+    position: absolute;
+    background: var(--color-border);
+    z-index: 1;
+}
+
+/* Mobile Connector: Vertical Line */
+@media (max-width: 767px) {
+    .connector {
+        width: 2px;
+        height: 3rem;
+        /* distance between steps */
+        top: 80px;
+        /* icon height */
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (min-width: 768px) {
+    .steps {
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: space-between;
+    }
+
+    .step {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Desktop Connector: Horizontal Line */
+    .connector {
+        height: 2px;
+        width: 60%;
+        /* Approximate distance */
+        top: 40px;
+        /* Center of icon */
+        left: 70%;
+        /* Start after icon */
+    }
+}

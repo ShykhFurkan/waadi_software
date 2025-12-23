@@ -1,0 +1,67 @@
+.section {
+    background-color: #1C1C1C;
+    color: var(--color-green);
+    padding: 6rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background decoration */
+.section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Subtle Teal/Pink mix for warmth */
+    background: radial-gradient(circle at top right, rgba(61, 182, 177, 0.2), transparent 70%);
+    pointer-events: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    text-align: center;
+    max-width: 700px;
+    position: relative;
+    z-index: 2;
+}
+
+.heading {
+    color: #FFFFFF;
+    margin-bottom: 1.5rem;
+}
+
+.text {
+    color: rgba(204, 229, 207, 0.9);
+    margin-bottom: 3rem;
+    font-size: 1.25rem;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    /* Primary button is Accent default, which works on Navy */
+    min-width: 200px;
+}
+
+.outlineBtn {
+    border-color: rgba(255, 255, 255, 0.3);
+    color: #FFFFFF;
+    min-width: 200px;
+}
+
+.outlineBtn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+}

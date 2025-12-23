@@ -1,0 +1,179 @@
+/* Audit Page Specific Styles */
+
+.auditIntro {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.title {
+    font-size: 3rem;
+    color: var(--color-blue-deep);
+    margin-bottom: 1.5rem;
+}
+
+[data-theme='dark'] .title {
+    color: var(--color-green);
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: var(--color-foreground);
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.8;
+}
+
+/* Problem Section (Context) */
+.problemSection {
+    margin-bottom: 6rem;
+    text-align: center;
+}
+
+.sectionTitle {
+    font-size: 2rem;
+    color: var(--color-blue-deep);
+    margin-bottom: 2rem;
+}
+
+[data-theme='dark'] .sectionTitle {
+    color: var(--color-green);
+}
+
+.problemText {
+    font-size: 1.125rem;
+    color: var(--color-muted-foreground);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* Includes Grid */
+.includesSection {
+    margin-bottom: 6rem;
+}
+
+.includesGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.includeCard {
+    background: var(--color-background);
+    border: 1px solid var(--color-border);
+    padding: 2rem;
+    border-radius: var(--radius-md);
+}
+
+.includeTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-blue);
+    margin-bottom: 0.75rem;
+}
+
+[data-theme='dark'] .includeTitle {
+    color: var(--color-teal);
+}
+
+.includeText {
+    color: var(--color-muted-foreground);
+    font-size: 1rem;
+}
+
+/* How It Works (Steps) */
+.stepsSection {
+    margin-bottom: 6rem;
+    background: var(--color-card);
+    padding: 4rem 2rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+}
+
+.stepsGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+}
+
+.stepNumber {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    background: var(--color-teal);
+    color: white;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* Audience Filter */
+.audienceSection {
+    margin-bottom: 6rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.audienceBox {
+    padding: 2.5rem;
+    border-radius: var(--radius-lg);
+}
+
+.forYou {
+    background: rgba(61, 182, 177, 0.05);
+    /* Teal tint */
+    border: 1px solid var(--color-teal-dim);
+}
+
+.notForYou {
+    background: rgba(246, 177, 206, 0.05);
+    /* Pink tint */
+    border: 1px solid var(--color-pink);
+}
+
+.audienceTitle {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-blue-deep);
+}
+
+[data-theme='dark'] .audienceTitle {
+    color: var(--color-green);
+}
+
+/* Outcomes (After Audit) */
+.outcomesSection {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.outcomesList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 2rem;
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.outcomeItem {
+    color: var(--color-muted-foreground);
+}
+
+@media (min-width: 768px) {
+    .includesGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .stepsGrid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .audienceSection {
+        grid-template-columns: 1fr 1fr;
+    }
+}

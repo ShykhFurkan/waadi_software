@@ -1,0 +1,168 @@
+/* About Page Specific Styles */
+
+.aboutIntro {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.title {
+    font-size: 3rem;
+    color: var(--color-blue-deep);
+    margin-bottom: 1.5rem;
+}
+
+[data-theme='dark'] .title {
+    color: var(--color-green);
+}
+
+.introText {
+    font-size: 1.25rem;
+    color: var(--color-foreground);
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.9;
+    font-weight: 500;
+    line-height: 1.8;
+}
+
+/* Why Section */
+.whySection {
+    margin-bottom: 6rem;
+    display: grid;
+    gap: 2rem;
+}
+
+.whyContent {
+    padding: 3rem;
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+}
+
+.sectionTitle {
+    font-size: 2rem;
+    color: var(--color-blue);
+    margin-bottom: 1.5rem;
+}
+
+[data-theme='dark'] .sectionTitle {
+    color: var(--color-teal);
+}
+
+.textBlock {
+    font-size: 1.125rem;
+    color: var(--color-muted-foreground);
+    margin-bottom: 1.5rem;
+}
+
+/* Thinking Grid */
+.thinkingSection {
+    margin-bottom: 6rem;
+}
+
+.thinkingGrid {
+    display: grid;
+    gap: 2rem;
+}
+
+.thinkingCard {
+    background: var(--color-background);
+    border-top: 4px solid var(--color-blue-deep);
+    border-radius: var(--radius-sm);
+    padding: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme='dark'] .thinkingCard {
+    border-color: var(--color-green);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.thinkingTitle {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-blue-deep);
+    margin-bottom: 1rem;
+}
+
+[data-theme='dark'] .thinkingTitle {
+    color: var(--color-foreground);
+}
+
+.thinkingText {
+    color: var(--color-muted-foreground);
+}
+
+/* What We Are / Are Not */
+.filterSection {
+    margin-bottom: 6rem;
+}
+
+.filterGrid {
+    display: grid;
+    gap: 2rem;
+}
+
+.filterColumn h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--color-border);
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+}
+
+.listItem {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    position: relative;
+    color: var(--color-foreground);
+}
+
+.positive .listItem::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-teal);
+    font-weight: bold;
+}
+
+.negative .listItem::before {
+    content: '×';
+    position: absolute;
+    left: 0;
+    color: var(--color-pink);
+    /* Use Pink for 'Not' */
+    font-weight: bold;
+}
+
+/* Working With Us */
+.workSection {
+    background: var(--color-blue-deep);
+    color: var(--color-beige);
+    padding: 4rem 2rem;
+    border-radius: var(--radius-lg);
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.workText {
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    font-size: 1.125rem;
+    color: rgba(252, 246, 217, 0.9);
+}
+
+@media (min-width: 768px) {
+    .thinkingGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .filterGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+}

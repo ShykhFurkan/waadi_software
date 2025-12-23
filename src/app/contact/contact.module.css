@@ -1,0 +1,131 @@
+/* Contact Page Specific Styles */
+
+.contactIntro {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.title {
+    font-size: 3rem;
+    color: var(--color-blue-deep);
+    margin-bottom: 1.5rem;
+}
+
+[data-theme='dark'] .title {
+    color: var(--color-green);
+}
+
+.introText {
+    font-size: 1.25rem;
+    color: var(--color-foreground);
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* Contact Container */
+.contactContainer {
+    max-width: 600px;
+    margin: 0 auto 6rem auto;
+}
+
+/* Form Styles */
+.form {
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    padding: 3rem 2rem;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.fieldGroup {
+    margin-bottom: 1.5rem;
+}
+
+.label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-blue-deep);
+    margin-bottom: 0.5rem;
+}
+
+[data-theme='dark'] .label {
+    color: var(--color-green);
+}
+
+.input,
+.textarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-background);
+    color: var(--color-foreground);
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+    font-family: inherit;
+}
+
+.input:focus,
+.textarea:focus {
+    outline: none;
+    border-color: var(--color-blue);
+    box-shadow: 0 0 0 2px rgba(21, 129, 191, 0.1);
+}
+
+.textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+/* Next Steps */
+.nextSteps {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 0.95rem;
+    color: var(--color-muted-foreground);
+    padding: 1.5rem;
+    background: var(--color-background);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border-subtle);
+}
+
+/* Secondary Options */
+.secondaryOptions {
+    margin-top: 4rem;
+    text-align: center;
+    border-top: 1px solid var(--color-border);
+    padding-top: 3rem;
+}
+
+.optionsTitle {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-blue-deep);
+    margin-bottom: 1.5rem;
+}
+
+[data-theme='dark'] .optionsTitle {
+    color: var(--color-foreground);
+}
+
+.optionsGrid {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.optionLink {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-muted-foreground);
+    transition: color var(--transition-fast);
+    font-weight: 500;
+}
+
+.optionLink:hover {
+    color: var(--color-blue);
+}
