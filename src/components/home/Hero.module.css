@@ -136,6 +136,46 @@
     }
 }
 
+/* Mobile-first responsive styles */
+@media (max-width: 767px) {
+    .hero {
+        min-height: 100vh;
+        height: auto;
+        padding: 100px 0 60px;
+        align-items: flex-start;
+    }
+
+    .headline {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+
+    .subheadline {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 0.75rem;
+    }
+
+    .trustLine {
+        font-size: 0.8125rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .actions a {
+        width: 100%;
+    }
+
+    .actions button {
+        width: 100%;
+    }
+}
+
 @media (min-width: 768px) {
     .headline {
         font-size: 4rem;
