@@ -17,7 +17,7 @@ export function Navbar() {
         <header className={styles.header}>
             <Container className={styles.container}>
                 <Link href="/" className={styles.logo}>
-                    {SITE_NAME}
+                    Waadi
                 </Link>
 
                 {/* Desktop Nav */}

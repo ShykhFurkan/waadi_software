@@ -19,6 +19,9 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: "Waadi Software | Digital Growth & Systems Studio",
   description: "Waadi Software builds websites, digital systems, professional media, and advertising campaigns that help businesses grow and operate efficiently.",
+  icons: {
+    icon: '/icon.svg',
+  },
 };
 
 export default function RootLayout({
